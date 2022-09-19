@@ -24,7 +24,7 @@ function realTimeValidation() {
     //regex; password must contain at least 1 number and must be 8 characters long
     //look ahead determines minimum (of 1 number)
     //after look ahead determines max
-    passwordRegex = /^(?=.*[0-9]){1,8}[a-zA-Z0-9]{8,8}$/;
+    passwordRegex = /^(?=.*[0-9]){1,8}[a-zA-Z0-9]{8,}$/;
 
     //if password field is empty submit button is inactive
     if (createPassword.value === '') {
@@ -51,7 +51,7 @@ function realTimeValidation() {
 
         displayPasswordValidation.innerText = "Invalid password"
         createButton.disabled = true;
-        displayPasswordValidation1.classList.remove('active');
+        displayPasswordValidation1.classList.remove('active');  
         displayPasswordValidation1.classList.add('false');
     }
 }
